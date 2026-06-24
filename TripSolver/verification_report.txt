@@ -1,0 +1,270 @@
+REPORT DI VERIFICA TRIPSOLVER
+Generato il: 2026-06-24 14:24
+Sistema: Windows 10 | Python 3.11.9
+
+--- Verifica tipo colonne opening_hour/closing_hour nel CSV ---
+  opening_hour dtype: float64  (OK)
+
+--- Verifica Java (richiesto dal reasoner OWL) ---
+java version "24.0.1" 2025-04-15
+Java(TM) SE Runtime Environment (build 24.0.1+9-30)
+Java HotSpot(TM) 64-Bit Server VM (build 24.0.1+9-30, mixed mode, sharing)
+
+======================================================================
+1/4 — ontology/build_kb.py
+======================================================================
+[INFO] Soglie data-driven calcolate sul dataset corrente: VisitaRapida <= 25 min (p25), EsperienzaImmersiva >= 45 min (p75)
+[WARN] Pellet fallito (OwlReadyJavaError: Java error message is:
+Exception in thread "main" java.lang.UnsupportedClassVersionError: org/apache/jena/riot/lang/LangRDFXML has been compiled by a more recent version of the Java Runtime (class file version 69.0), this version of the Java Runtime only recognizes class file versions up to 68.0
+
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:962)
+
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:132)
+
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:776)
+
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:691)
+
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:620)
+
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:578)
+
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+
+	at org.apache.jena.riot.RiotReader.createParser(RiotReader.java:128)
+
+	at org.apache.jena.riot.RDFParserRegistry$ReaderRIOTFactoryImpl$1.read(RDFParserRegistry.java:147)
+
+	at org.apache.jena.riot.RDFDataMgr.process(RDFDataMgr.java:751)
+
+	at org.apache.jena.riot.RDFDataMgr.read(RDFDataMgr.java:258)
+
+	at org.apache.jena.riot.RDFDataMgr.read(RDFDataMgr.java:244)
+
+	at org.apache.jena.riot.adapters.RDFReaderRIOT.read(RDFReaderRIOT.java:65)
+
+	at com.hp.hpl.jena.rdf.model.impl.ModelCom.read(ModelCom.java:276)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.findMetadata(OntDocumentManager.java:891)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.initialiseMetadata(OntDocumentManager.java:849)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.<init>(OntDocumentManager.java:197)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.<init>(OntDocumentManager.java:179)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.<init>(OntDocumentManager.java:163)
+
+	at com.hp.hpl.jena.ontology.OntDocumentManager.getInstance(OntDocumentManager.java:241)
+
+	at com.hp.hpl.jena.ontology.OntModelSpec.getDocumentManager(OntModelSpec.java:320)
+
+	at com.hp.hpl.jena.ontology.OntModelSpec.<init>(OntModelSpec.java:207)
+
+	at org.mindswap.pellet.jena.PelletReasonerFactory.<clinit>(PelletReasonerFactory.java:57)
+
+	at org.mindswap.pellet.jena.JenaLoader.clear(JenaLoader.java:84)
+
+	at org.mindswap.pellet.jena.JenaLoader.<init>(JenaLoader.java:42)
+
+	at pellet.PelletCmdApp.getLoader(PelletCmdApp.java:262)
+
+	at pellet.PelletCmdApp.getLoader(PelletCmdApp.java:257)
+
+	at pellet.PelletCmdApp.getKB(PelletCmdApp.java:220)
+
+	at pellet.PelletRealize.run(PelletRealize.java:67)
+
+	at pellet.Pellet.run(Pellet.java:105)
+
+	at pellet.Pellet.main(Pellet.java:59)
+
+). Provo HermiT (sync_reasoner)...
+[INFO] Reasoner usato: hermit | tempo: 3.34s
+[INFO] Conteggi feature inferite (devono essere > 0 per almeno alcune):
+is_DaAbbinareVicino       15
+is_AdattoMaltempo         14
+is_EsperienzaImmersiva     9
+is_VisitaRapida            8
+is_IconaGratuita           6
+is_AltaPriorita            4
+dtype: int64
+[OK] Salvato dataset arricchito: data/poi_enriched.csv (28 righe)
+[OK] Salvata ontologia: ontology/trip_ontology.owl
+[OK] Soglie tracciate in: ontology/thresholds_used.txt
+* Owlready2 * Running Pellet...
+    java -Xmx2000M -cp C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\antlr-3.2.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\antlr-runtime-3.2.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\aterm-java-1.6.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\commons-codec-1.6.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\httpclient-4.2.3.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\httpcore-4.2.2.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jcl-over-slf4j-1.6.4.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jena-arq-fixed2.10.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jena-core-fixed2.10.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jena-iri-0.9.5.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jena-tdb-0.10.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\jgrapht-jdk1.5.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\log4j-1.2-api-2.19.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\log4j-api-2.19.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\log4j-core-2.19.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\owlapi-distribution-3.4.3-bin.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\pellet-2.3.1.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\slf4j-api-1.6.4.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\slf4j-log4j12-1.6.4.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\xercesImpl-2.10.0.jar;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\pellet\xml-apis-1.4.01.jar pellet.Pellet realize --loader Jena --input-format N-Triples --infer-prop-values --infer-data-prop-values --ignore-imports C:\Users\Vincenzo\AppData\Local\Temp\tmpbz3k2alz
+* Owlready2 * Running HermiT...
+    java -Xmx2000M -cp C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\hermit;C:\Users\Vincenzo\AppData\Local\Programs\Python\Python311\Lib\site-packages\owlready2\hermit\HermiT.jar org.semanticweb.HermiT.cli.CommandLine -c -O -D -I file:///C:/Users/Vincenzo/AppData/Local/Temp/tmpogtfya8c
+* Owlready2 * HermiT took 1.9999158382415771 seconds
+* Owlready * Reparenting trip_kb.poi_3: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo, trip_kb.IconaGratuita}
+* Owlready * Reparenting trip_kb.poi_4: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva, trip_kb.AdattoMaltempo, trip_kb.AltaPriorita}
+* Owlready * Reparenting trip_kb.poi_1: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva, trip_kb.IconaGratuita, trip_kb.AdattoMaltempo, trip_kb.AltaPriorita}
+* Owlready * Reparenting trip_kb.poi_2: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva, trip_kb.AdattoMaltempo, trip_kb.AltaPriorita}
+* Owlready * Reparenting trip_kb.poi_14: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva}
+* Owlready * Reparenting trip_kb.poi_15: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_16: {trip_kb.PointOfInterest} => {trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_17: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva}
+* Owlready * Reparenting trip_kb.poi_18: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo, trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_19: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_7: {trip_kb.PointOfInterest} => {trip_kb.IconaGratuita, trip_kb.AltaPriorita, trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_8: {trip_kb.PointOfInterest} => {trip_kb.IconaGratuita}
+* Owlready * Reparenting trip_kb.poi_5: {trip_kb.PointOfInterest} => {trip_kb.IconaGratuita}
+* Owlready * Reparenting trip_kb.poi_6: {trip_kb.PointOfInterest} => {trip_kb.IconaGratuita}
+* Owlready * Reparenting trip_kb.poi_10: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva, trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_11: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva}
+* Owlready * Reparenting trip_kb.poi_9: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva, trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_12: {trip_kb.PointOfInterest} => {trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_13: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_25: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo}
+* Owlready * Reparenting trip_kb.poi_26: {trip_kb.PointOfInterest} => {trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_28: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo, trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_20: {trip_kb.PointOfInterest} => {trip_kb.EsperienzaImmersiva}
+* Owlready * Reparenting trip_kb.poi_21: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo, trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_22: {trip_kb.PointOfInterest} => {trip_kb.VisitaRapida}
+* Owlready * Reparenting trip_kb.poi_23: {trip_kb.PointOfInterest} => {trip_kb.AdattoMaltempo}
+* Owlready * (NB: only changes on entities loaded in Python are shown, other changes are done but not listed)
+
+[OK] 1/4 — ontology/build_kb.py
+
+>>> REASONER USATO: HERMIT
+>>> Pellet non disponibile (incompatibilita' Java): fallback su HermiT.
+>>> Comportamento atteso e documentato nel paragrafo 2.3.2.
+
+======================================================================
+2/4 — ml/model_comparison.py (Esperimento A)
+======================================================================
+=== BASELINE (solo feature grezze) ===
+             model  accuracy_mean  accuracy_std  f1_macro_mean  f1_macro_std  balanced_accuracy_mean  balanced_accuracy_std
+LogisticRegression          0.699         0.133          0.663         0.147                   0.716                  0.134
+      RandomForest          0.737         0.139          0.699         0.153                   0.754                  0.135
+  GradientBoosting          0.711         0.153          0.691         0.159                   0.739                  0.142
+
+=== ARRICCHITO (baseline + feature semantiche da KB) ===
+             model  accuracy_mean  accuracy_std  f1_macro_mean  f1_macro_std  balanced_accuracy_mean  balanced_accuracy_std
+LogisticRegression          0.693         0.148          0.661         0.161                   0.716                  0.148
+      RandomForest          0.714         0.139          0.683         0.148                   0.743                  0.129
+  GradientBoosting          0.709         0.146          0.686         0.155                   0.734                  0.138
+
+=== DELTA (arricchito - baseline), per accuracy media ===
+             model  accuracy_mean_base  accuracy_mean_enr  delta_accuracy
+LogisticRegression               0.699              0.693          -0.005
+      RandomForest               0.737              0.714          -0.023
+  GradientBoosting               0.711              0.709          -0.003
+
+[OK] Risultati salvati in ml/model_comparison_results.csv
+
+[OK] 2/4 — ml/model_comparison.py (Esperimento A)
+
+======================================================================
+3/4 — ml/low_data_scenario.py (Esperimento B)
+======================================================================
+=== Accuracy media ± dev.std, baseline vs arricchito, per modello e dimensione del training set ===
+        classifier  train_size feature_set  accuracy_mean  accuracy_std  f1_macro_mean  f1_macro_std
+      RandomForest           6    baseline          0.509         0.099          0.511         0.091
+      RandomForest           6    enriched          0.527         0.117          0.535         0.109
+      RandomForest          10    baseline          0.633         0.122          0.625         0.106
+      RandomForest          10    enriched          0.620         0.131          0.617         0.120
+      RandomForest          14    baseline          0.686         0.088          0.667         0.092
+      RandomForest          14    enriched          0.686         0.084          0.672         0.084
+      RandomForest          18    baseline          0.700         0.103          0.669         0.111
+      RandomForest          18    enriched          0.690         0.125          0.657         0.134
+      RandomForest          22    baseline          0.694         0.167          0.659         0.183
+      RandomForest          22    enriched          0.689         0.159          0.649         0.176
+LogisticRegression           6    baseline          0.517         0.123          0.514         0.127
+LogisticRegression           6    enriched          0.553         0.126          0.558         0.130
+LogisticRegression          10    baseline          0.637         0.121          0.632         0.116
+LogisticRegression          10    enriched          0.630         0.129          0.621         0.127
+LogisticRegression          14    baseline          0.698         0.097          0.688         0.109
+LogisticRegression          14    enriched          0.705         0.084          0.697         0.087
+LogisticRegression          18    baseline          0.713         0.106          0.692         0.113
+LogisticRegression          18    enriched          0.680         0.140          0.655         0.152
+LogisticRegression          22    baseline          0.694         0.183          0.674         0.190
+LogisticRegression          22    enriched          0.667         0.202          0.632         0.217
+
+=== Delta di accuracy (arricchito - baseline) — RandomForest ===
+feature_set  baseline  enriched  delta_enriched_minus_baseline
+train_size                                                    
+6               0.509     0.527                          0.018
+10              0.633     0.620                         -0.013
+14              0.686     0.686                         -0.000
+18              0.700     0.690                         -0.010
+22              0.694     0.689                         -0.006
+
+=== Delta di accuracy (arricchito - baseline) — LogisticRegression ===
+feature_set  baseline  enriched  delta_enriched_minus_baseline
+train_size                                                    
+6               0.517     0.553                          0.036
+10              0.637     0.630                         -0.007
+14              0.698     0.705                          0.007
+18              0.713     0.680                         -0.033
+22              0.694     0.667                         -0.028
+
+[OK] Risultati salvati in ml/low_data_scenario_results.csv
+
+[NOTA] Confronta il pattern fra RandomForest e LogisticRegression: se il
+vantaggio della KB è più marcato per il modello lineare, è coerente con la
+nota metodologica sopra. Con un dataset reale più ampio questo confronto
+sarà più stabile e significativo statisticamente.
+
+[OK] 3/4 — ml/low_data_scenario.py (Esperimento B)
+
+======================================================================
+4/4 — demo/run_demo.py
+======================================================================
+[INFO] POI selezionati per l'itinerario: 20
+
+============================================================
+=================== ITINERARIO PROPOSTO ====================
+============================================================
+
+--- Giorno 1 ---
+  1. Cattedrale di San Sabino  (30 min)
+  2. Arco Basso e Bari Vecchia  (30 min)
+  3. Chiesa Russa di San Nicola  (25 min)
+  4. Piazza del Ferrarese  (15 min)
+  5. Lungomare Nazario Sauro  (40 min)
+  6. Orto Botanico Universita di Bari  (60 min)
+  7. Spiaggia Pane e Pomodoro  (90 min)
+  Distanza a piedi stimata fra le tappe: 4.74 km
+  Tempo totale di visita: 290 min (~4.8 h)
+
+--- Giorno 2 ---
+  1. Basilica di San Nicola  (45 min)
+  2. Fortino Sant'Antonio  (20 min)
+  3. Museo Archeologico Santa Scolastica  (45 min)
+  4. Museo Civico  (40 min)
+  5. Pinacoteca Metropolitana  (50 min)
+  6. Spiaggia di Torre Quetta  (90 min)
+  Distanza a piedi stimata fra le tappe: 6.20 km
+  Tempo totale di visita: 290 min (~4.8 h)
+
+--- Giorno 3 ---
+  1. Castello Svevo  (60 min)
+  2. Strada delle Orecchiette  (25 min)
+  3. Teatro Margherita  (40 min)
+  4. Mercato del Pesce  (30 min)
+  5. Teatro Petruzzelli  (60 min)
+  6. Via Sparano  (30 min)
+  7. Parco 2 Giugno  (45 min)
+  Distanza a piedi stimata fra le tappe: 5.11 km
+  Tempo totale di visita: 290 min (~4.8 h)
+
+============================================================
+
+[OK] 4/4 — demo/run_demo.py
+
+
+======================================================================
+RIEPILOGO
+======================================================================
+  [OK] build_kb.py
+  [OK] model_comparison.py
+  [OK] low_data_scenario.py
+  [OK] run_demo.py
+
+Tutti gli script sono andati a buon fine.
+I risultati ML possono variare leggermente fra esecuzioni diverse:
+random_state non e' fissato nei modelli ensemble (cfr. par. 5.4).

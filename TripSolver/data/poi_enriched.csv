@@ -1,0 +1,29 @@
+id,name,category,neighborhood,lat,lon,opening_hour,closing_hour,visit_duration_min,indoor,free_entry,iconic,tourist_tier,data_source,source_url,is_VisitaRapida,is_EsperienzaImmersiva,is_IconaGratuita,is_AltaPriorita,is_AdattoMaltempo,is_DaAbbinareVicino
+1,Basilica di San Nicola,Religioso,BariVecchia,41.1306,16.8694,6.5,20.5,45,1,1,1,MustSee,"verificato (ricerca web, giu 2026)",https://www.basilicasannicola.it/sez/9/232/orari,0,1,1,1,1,1
+2,Castello Svevo,Storico,BariVecchia,41.1275,16.8711,8.5,19.5,60,1,0,1,MustSee,"verificato (ricerca web, giu 2026)",https://www.ariannazappia.it/cosa-visitare-a-bari/,0,1,0,1,1,1
+3,Cattedrale di San Sabino,Religioso,BariVecchia,41.1294,16.8704,8.0,20.0,30,1,1,1,MustSee,"verificato (ricerca web, giu 2026)",https://excelsiorbari.it/la-cattedrale-di-bari/,0,0,1,0,1,1
+4,Teatro Petruzzelli,Cultura,Murat,41.1219,16.8703,10.0,13.0,60,1,0,1,MustSee,stima,,0,1,0,1,1,1
+5,Lungomare Nazario Sauro,Passeggiata,Lungomare,41.1255,16.8775,0.0,24.0,40,0,1,1,MustSee,non richiede verifica: spazio pubblico urbano sempre accessibile (non un'istituzione con orario),,0,0,1,0,0,0
+6,Arco Basso e Bari Vecchia,QuartiereStorico,BariVecchia,41.13,16.8705,0.0,24.0,30,0,1,1,MustSee,non richiede verifica: spazio pubblico urbano sempre accessibile (non un'istituzione con orario),,0,0,1,0,0,1
+7,Strada delle Orecchiette,EsperienzaLocale,BariVecchia,41.1298,16.8709,0.0,24.0,25,0,1,1,MustSee,corretto: via/spazio pubblico sempre accessibile (non un'istituzione con orario),,1,0,1,1,0,1
+8,Via Sparano,Shopping,Murat,41.1213,16.8697,0.0,24.0,30,0,1,1,MustSee,corretto: via/spazio pubblico sempre accessibile (non un'istituzione con orario),,0,0,1,0,0,1
+9,Pinacoteca Metropolitana,Museo,BariVecchia,41.1192,16.8682,9.0,19.0,50,1,0,0,Secondary,"verificato (ricerca web, giu 2026)",https://www.pinacotecabari.it/index.php/info/orari-di-visita,0,1,0,0,1,0
+10,Museo Archeologico Santa Scolastica,Museo,BariVecchia,41.1296,16.8674,9.0,19.0,45,1,0,0,Secondary,"verificato (ricerca web, giu 2026)",https://www.facebook.com/Museodisantascolastica/,0,1,0,0,1,1
+11,Orto Botanico Universita di Bari,Natura,Periferia,41.1066,16.8765,8.5,13.5,60,0,1,0,Secondary,"verificato (ricerca web, giu 2026)",https://www.uniba.it/it/ricerca/altre-strutture/museo-orto-botanico/museo-orto-botanico,0,1,0,0,0,0
+12,Piazza del Ferrarese,Piazza,BariVecchia,41.129,16.8716,0.0,24.0,15,0,1,0,Secondary,non richiede verifica: spazio pubblico urbano sempre accessibile (non un'istituzione con orario),,1,0,0,0,0,1
+13,Teatro Margherita,ArteContemporanea,BariVecchia,41.1296,16.8682,10.0,22.0,40,1,0,0,Secondary,"verificato (ricerca web, giu 2026)",https://www.cestee.it/destinazione/italia/bari/teatro-margherita,0,0,0,0,1,1
+14,Spiaggia Pane e Pomodoro,Spiaggia,Periferia,41.108,16.895,0.0,24.0,90,0,1,0,Secondary,non richiede verifica: spazio pubblico urbano sempre accessibile (non un'istituzione con orario),,0,1,0,0,0,0
+15,Mercato del Pesce,Mercato,BariVecchia,41.1275,16.865,7.0,14.0,30,1,1,0,Secondary,stima,,0,0,0,0,1,0
+16,Fortino Sant'Antonio,Storico,BariVecchia,41.1316,16.872,8.0,19.0,20,0,1,0,Secondary,verificato (giu 2026): area esterna accessibile 8:00-tramonto; aree interne solo durante eventi/mostre (non modellato),https://audiala.com/it/italia/bari/fortino-santantonio,1,0,0,0,0,1
+17,Parco 2 Giugno,Natura,Periferia,41.101,16.839,0.0,22.0,45,0,1,0,Secondary,stima,,0,1,0,0,0,0
+18,Chiesa Russa di San Nicola,Religioso,BariVecchia,41.1311,16.8702,9.0,18.0,25,1,1,0,Secondary,stima,,1,0,0,0,1,1
+19,Museo Civico,Museo,Murat,41.1241,16.8625,9.5,18.5,40,1,0,0,Secondary,"verificato (fonte ufficiale, giu 2026): Lun-Ven 9:30-18:30 (weekend ridotto 9:30-13:30, non modellato)",https://www.museocivicobari.it/,0,0,0,0,1,0
+20,Spiaggia di Torre Quetta,Spiaggia,Periferia,41.1015,16.9105,0.0,24.0,90,0,1,0,Secondary,non richiede verifica: spazio pubblico urbano sempre accessibile (non un'istituzione con orario),,0,1,0,0,0,0
+21,Chiesa di San Gregorio,Religioso,BariVecchia,41.1308,16.8689,,,20,1,1,0,Optional,"verificato (recensioni multiple concordanti): apertura IRREGOLARE/LIMITATA, nessun orario fisso pubblicato",https://www.tripadvisor.it/Attraction_Review-g187874-d10375940-Reviews-Chiesa_di_San_Gregorio-Bari_Province_of_Bari_Puglia.html,1,0,0,0,1,1
+22,Palazzo Mincuzzi,Architettura,Murat,41.1218,16.8694,0.0,24.0,15,0,1,0,Optional,"verificato (giu 2026): ex-negozio Benetton chiuso dal dic. 2024, attualmente visitabile solo dall'esterno (facciata)",https://www.theaboutmagazine.it/palazzo-mincuzzi-bari,1,0,0,0,0,1
+23,Acquario di Bari,Museo,BariVecchia,41.129,16.873,,,30,1,0,0,Optional,"verificato (fonte ufficiale ISPRA): apertura SU RICHIESTA, non orario fisso",https://www.isprambiente.gov.it/it/attivita/museo/regioni/musei/acquario-di-bari,0,0,0,0,1,1
+24,Stadio San Nicola,Sport,Periferia,41.0875,16.8095,,,30,0,0,0,Optional,verificato (giu 2026): nessun orario di visita turistica regolare; accessibile principalmente in occasione di eventi/partite,https://it.wikipedia.org/wiki/Stadio_San_Nicola,0,0,0,0,0,0
+25,Teatro Kursaal Santalucia,Cultura,Murat,41.1241,16.8682,10.0,20.0,40,1,0,0,Optional,stima,,0,0,0,0,1,0
+26,Palazzo della Provincia,Architettura,Lungomare,41.1236,16.8767,9.0,19.0,15,0,1,0,Optional,stima,,1,0,0,0,0,0
+27,Foro Boario,Natura,Periferia,41.118,16.854,0.0,22.0,30,0,1,0,Optional,stima,,0,0,0,0,0,0
+28,Basilica Santa Maria del Buon Consiglio,Religioso,Periferia,41.1175,16.8453,9.0,18.0,20,1,1,0,Optional,stima,,1,0,0,0,1,0

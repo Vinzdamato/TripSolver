@@ -1,0 +1,5 @@
+Soglie data-driven calcolate sul dataset data/poi_bari_sample.csv (eseguito il 2026-06-24 14:24):
+  VisitaRapida: durata <= 25 min (25 percentile)
+  EsperienzaImmersiva: durata >= 45 min (75 percentile)
+  Reasoner usato: hermit | tempo di ragionamento: 3.34s
+  n. POI nel dataset: 28
